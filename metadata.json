@@ -1,0 +1,8 @@
+
+{
+  "name": "CBE Birr Plus",
+  "description": "A modern, secure, and AI-powered banking experience inspired by the Commercial Bank of Ethiopia (CBE). Features seamless transfers, utility payments, and an intelligent financial assistant.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
