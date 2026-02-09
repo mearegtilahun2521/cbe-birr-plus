@@ -29,8 +29,10 @@ jobs:
 
       - name: Build APK
         run: |
-          npx cap add android
+          npx cap add android || true
           npx cap copy
+          # This line fixes the Duplicate Class error automatically
+          echo "configurations.all { resolutionStrategy { eachDependency { if (requested.group == 'org.jetbrains.kotlin') { useVersion '1.8.22' } } } }" >> android/app/build.gradle
           cd android && chmod +x gradlew && ./gradlew assembleDebug
 
       - name: Upload APK
